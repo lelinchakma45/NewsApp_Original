@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp"
+    android:backgroundTint="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="10dp"
+        android:paddingEnd="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/newsCover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/poster" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/newsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/abril_fatface"
+            android:maxLines="3"
+            android:text="Swati Maliwal assault case: NCW summons Delhi CM Arvind Kejriwal's former PS Bibhav Kumar"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/newsTitle"
+            app:layout_constraintStart_toStartOf="@+id/newsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/newsTitle">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/newsAuthorProfile"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/profile_photo" />
+
+            <TextView
+                android:id="@+id/newsAuthorName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/ubuntu"
+                android:gravity="center_vertical"
+                android:text="Lelin Chakma"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/timeShow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="3 minute ago"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/ubuntu"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/eye"/>
+                        <TextView
+                            android:id="@+id/viewerShow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="390.56k"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/ubuntu"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/comment"/>
+                        <TextView
+                            android:id="@+id/commentCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="390.56k"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/ubuntu"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/share"/>
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/dots"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
